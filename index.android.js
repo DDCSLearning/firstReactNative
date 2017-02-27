@@ -21,7 +21,7 @@ export default class AwesomeProject extends Component {
           Welcome to React Native!
         </Text>
         <Blink text="Use State" />
-        <Text style={styles.instructions}>
+        <Text style={styles.greetings}>
           <Greeting name="Benni" />
           <Greeting name="Clemens" />
           <Greeting name="Daniel" />
@@ -43,11 +43,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10
   },
-  instructions: {
+  greetings: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
-    fontSize: 30
+    fontSize: 30,
+    borderColor: '#333333',
+    borderStyle: 'solid',
+    borderTopWidth: 2
+
   }
 });
 
