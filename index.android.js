@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View, Navigator } from 'react-native';
 
 import Banner from './Banner';
 import Greeting from './Greeting';
@@ -13,22 +13,43 @@ import FlexBox from './FlexBox';
 import Blink from './Blink';
 import Translate from './Translate';
 import List from './List';
+import MyScene from './MyScene';
 
 export default class AwesomeProject extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Banner />
-        <FlexBox />
-        <Translate />
-        <List />
-        <Blink text="Using State" />
-        <Text style={styles.greetings}>
-          <Greeting name="Benni" />
-          <Greeting name="Clemens" />
-          <Greeting name="Daniel" />
-        </Text>
-      </View>
+      <Navigator
+        initialRoute={{ title: 'My Initial Scene', index: 0 }}
+        renderScene={(route, navigator) => (
+          <View style={styles.container}>
+            <Banner />
+            <MyScene
+              title={route.title}
+              onForward={() => {
+                const nextIndex = route.index + 1;
+                navigator.push({
+                  title: 'Scene ' + nextIndex,
+                  index: nextIndex
+                });
+              }}
+              onBack={() => {
+                if (route.index > 0) {
+                  navigator.pop();
+                }
+              }}
+            />
+            <FlexBox />
+            <Translate />
+            <List />
+            <Blink text="Using State" />
+            <Text style={styles.greetings}>
+              <Greeting name="Benni" />
+              <Greeting name="Clemens" />
+              <Greeting name="Daniel" />
+            </Text>
+          </View>
+        )}
+      />
     );
   }
 }
