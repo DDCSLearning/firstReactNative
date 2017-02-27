@@ -12,18 +12,17 @@ import Greeting from './Greeting';
 import FlexBox from './FlexBox';
 import Blink from './Blink';
 import Translate from './Translate';
+import List from './List';
 
 export default class AwesomeProject extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Banner />
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
         <FlexBox />
         <Translate />
-        <Blink text="Using State"/>
+        <List />
+        <Blink text="Using State" />
         <Text style={styles.greetings}>
           <Greeting name="Benni" />
           <Greeting name="Clemens" />
@@ -50,7 +49,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
-    fontSize: 30,
+    fontSize: 10,
     borderColor: '#333333',
     borderStyle: 'solid',
     borderTopWidth: 2
