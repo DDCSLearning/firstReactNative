@@ -9,19 +9,22 @@ import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 
 import Banner from './Banner';
 import Greeting from './Greeting';
+import Blink from './Blink';
+
 
 export default class AwesomeProject extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Banner/>
+        <Banner />
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
+        <Blink text="Use State" />
         <Text style={styles.instructions}>
-          <Greeting name="Benni"/>
-          <Greeting name="Clemens"/>
-          <Greeting name="Daniel"/>
+          <Greeting name="Benni" />
+          <Greeting name="Clemens" />
+          <Greeting name="Daniel" />
         </Text>
       </View>
     );
@@ -44,7 +47,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
-    fontSize: 30,
+    fontSize: 30
   }
 });
 
