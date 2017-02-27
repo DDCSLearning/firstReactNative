@@ -9,8 +9,9 @@ import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 
 import Banner from './Banner';
 import Greeting from './Greeting';
-import Blink from './Blink';
 import FlexBox from './FlexBox';
+import Blink from './Blink';
+import Translate from './Translate';
 
 export default class AwesomeProject extends Component {
   render() {
@@ -21,7 +22,8 @@ export default class AwesomeProject extends Component {
           Welcome to React Native!
         </Text>
         <FlexBox />
-        <Blink text="Use State" />
+        <Translate />
+        <Blink text="Using State"/>
         <Text style={styles.greetings}>
           <Greeting name="Benni" />
           <Greeting name="Clemens" />
