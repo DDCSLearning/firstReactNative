@@ -8,6 +8,7 @@ import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 
 import Banner from './Banner';
+import Greeting from './Greeting';
 
 export default class AwesomeProject extends Component {
   render() {
@@ -18,8 +19,9 @@ export default class AwesomeProject extends Component {
           Welcome to React Native!
         </Text>
         <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
+          <Greeting name="Benni"/>
+          <Greeting name="Clemens"/>
+          <Greeting name="Daniel"/>
         </Text>
       </View>
     );
