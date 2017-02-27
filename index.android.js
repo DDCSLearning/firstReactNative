@@ -5,12 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 
 export default class AwesomeProject extends Component {
   render() {
@@ -18,9 +13,6 @@ export default class AwesomeProject extends Component {
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
         </Text>
         <Text style={styles.instructions}>
           Double tap R on your keyboard to reload,{'\n'}
@@ -36,18 +28,19 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F5FCFF'
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 10
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
-  },
+    fontSize: 30,
+  }
 });
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
